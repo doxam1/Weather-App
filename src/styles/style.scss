@@ -1,1 +1,66 @@
 // write style here in scss, main file.
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    & .appHeader {
+        display: flex;
+        max-height: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        color: lightseagreen;
+        text-shadow: 1px 1px 1px gray;
+    }
+
+    & .mainBody {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        & .weatherDisplayDiv {
+            height: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 1.6;
+
+            & .cityHeader {
+            }
+
+            & .threeDayWeatherDivs {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+
+                & .todayDiv, .tomorrowDiv, .dayAfterTomorrowDiv {
+                    border-radius: 1rem;
+                    box-shadow: 1px 1px 3px black;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 300px;
+                    margin-bottom: 1rem;
+                    min-width: 300px;
+                    border: 1px solid black;
+                    transform: scale(1);
+                    transition: transform .3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.3);
+                    }
+                }
+                
+            }
+
+            
+        }
+    }
+}

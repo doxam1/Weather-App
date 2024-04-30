@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Wether App </title>
 </head>
+
 <body>
+    <header>
+        <div class="appHeader">
+            <h2>Wether Gidget</h2>
+        </div>
+    </header>
+    <main class="mainBody">
 
     <form>
         <label for="locationInput"> Enter Location: </label>
-        <input id="locationInput" name="locationInput" type="text" />
+        <input id="locationInput" name="locationInput" type="text" list="suggestedLocations" />
+        <datalist id="suggestedLocations">
+            <option value="Tel Aviv"></option>
+            <option value="Jerusalem"></option>
+            <option value="New York"></option>
+            <option value="Tokyo"></option>
+            <option value="Bangkok"></option>
+        </datalist>
         <button type="button" class="btn locationSubmit"> Send </button>
     </form>
-    
+
+    <div class="weatherDisplayDiv">
+    </div>
+
+    </main>
+
 </body>
+
 </html>

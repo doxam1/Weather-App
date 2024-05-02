@@ -1,2 +1,1 @@
-# template
-My template repo
+Weather app for the odin project.

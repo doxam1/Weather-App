@@ -9,7 +9,7 @@ locationSubmit.onclick = () => {
 };
 
 async function getWeather(location) {
-
+  weatherDisplayDiv.textContent = 'Loading.... tik tok...';
   try {const response = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=5214792350054eb78b5162558241604&q=${location}&days=3`,
     {
@@ -55,6 +55,6 @@ async function getWeather(location) {
       `;
 } catch (msg) {
     console.log(msg);
-    weatherDisplayDiv.innerHTML = `<p> Sorry, I couldn't find a city or a country named ${location} </p>`;
+    weatherDisplayDiv.innerHTML = `<p> Sorry, I couldn't find a city or a country named ${location}<br>${msg}</p> `;
   };
 }
